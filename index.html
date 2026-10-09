@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>TP Media | Tampa media and technology company</title>
+<meta name="description" content="TP Media is an emerging Tampa-based media company building original content, conversations, and educational media to help people understand technology, find opportunities, and connect.">
+<meta name="theme-color" content="#23122B">
+<!-- EDIT: after publishing, add <link rel="canonical" href="https://YOUR-SITE-URL/"> and <meta property="og:image" content="https://YOUR-SITE-URL/images/social.jpg"> (1200x630 image) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="TP Media | Your story deserves thoughtful production">
+<meta property="og:description" content="An emerging Tampa-based media and technology company: original content, conversations, and educational media rooted in storytelling and community.">
+<meta property="og:site_name" content="TP Media">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TP Media | Tampa media and technology">
+<meta name="twitter:description" content="Original media, conversations, and educational content rooted in Tampa.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2323122B'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' font-weight='700' text-anchor='middle' fill='%23F4F0F6'%3ETP%3C/text%3E%3Ccircle cx='51' cy='15' r='5' fill='%23FF6A5C'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --plum:#23122B; --plum2:#331B3D; --coral:#FF6A5C; --glass:#7FD1C0;
+  --bg:#F4F0F6; --ink:#23122B; --muted:#5E4C66; --line:rgba(35,18,43,.18); --card:#EAE3EE;
+  --on-plum:#F4F0F6; --on-plum-muted:#BCAEC4;
+  --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
+  --pad:clamp(1.25rem,5vw,4rem);
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1B0F21;--ink:#F4F0F6;--muted:#BCAEC4;--line:rgba(244,240,246,.2);--card:#2A1733}}
+:root[data-theme="dark"]{--bg:#1B0F21;--ink:#F4F0F6;--muted:#BCAEC4;--line:rgba(244,240,246,.2);--card:#2A1733}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--serif);font-size:1.125rem;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--coral);outline-offset:3px;border-radius:2px}
+.wrap{max-width:1240px;margin:0 auto;padding:0 var(--pad)}
+h1,h2,h3{font-family:var(--display);line-height:1.02;letter-spacing:-.03em;margin:0;font-weight:700}
+h2{font-size:clamp(2.2rem,5.2vw,4.2rem);max-width:16ch}
+h3{font-size:clamp(1.5rem,2.4vw,2rem);letter-spacing:-.02em;line-height:1.1}
+p{margin:0 0 1.1em;max-width:62ch}
+.lead{font-size:clamp(1.2rem,1.9vw,1.45rem);line-height:1.55}
+.kicker{font-family:var(--display);font-weight:600;font-size:.95rem;color:var(--muted);margin:0 0 1.2rem;display:flex;align-items:center;gap:.6rem}
+.kicker::before{content:"";width:.7rem;height:.7rem;border-radius:50%;background:var(--coral)}
+section{padding:clamp(4.5rem,10vw,9rem) 0}
+
+/* NAV */
+header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:var(--plum);color:var(--on-plum);border-bottom:1px solid rgba(244,240,246,.12)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.mark{font-family:var(--display);font-weight:800;font-size:1.55rem;letter-spacing:-.04em;text-decoration:none;display:inline-flex;align-items:baseline;gap:.15em}
+.mark i{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:0;font-size:1.25rem}
+.mark b{width:.42em;height:.42em;border-radius:50%;background:var(--coral);align-self:flex-start;margin-top:.3em;animation:onair 2.4s ease-in-out infinite}
+@keyframes onair{50%{opacity:.35}}
+.nav ul{display:flex;gap:2rem;list-style:none;margin:0;padding:0;font-family:var(--display);font-weight:500;font-size:1rem}
+.nav ul a{text-decoration:none;padding:.4rem 0;background:linear-gradient(var(--coral),var(--coral)) 0 100%/0 2px no-repeat;transition:background-size .3s}
+.nav ul a:hover{background-size:100% 2px}
+.nav .pill{background:var(--coral);color:var(--plum);padding:.5rem 1.1rem;border-radius:99px;font-weight:700}
+.nav .pill:hover{background-size:0 2px;filter:brightness(1.08)}
+.burger{display:none;background:none;border:1px solid rgba(244,240,246,.35);color:inherit;border-radius:99px;padding:.45rem 1rem;font:600 .95rem var(--display);cursor:pointer}
+@media(max-width:780px){
+  .burger{display:block}
+  .nav ul{display:none;position:absolute;left:0;right:0;top:68px;background:var(--plum);flex-direction:column;gap:0;padding:.5rem var(--pad) 1.5rem;border-bottom:1px solid rgba(244,240,246,.12)}
+  .nav ul.open{display:flex}
+  .nav li{border-bottom:1px solid rgba(244,240,246,.1)}
+  .nav ul a{display:block;padding:1rem 0;font-size:1.25rem}
+  .nav .pill{display:inline-block;margin-top:1rem;padding:.7rem 1.4rem}
+}
+
+/* HERO */
+.hero{background:var(--plum);color:var(--on-plum);padding:clamp(3.5rem,8vw,7rem) 0 0;overflow:hidden}
+.hero .kicker{color:var(--on-plum-muted)}
+.hero h1{font-size:clamp(3rem,10.5vw,9.5rem);max-width:12ch;letter-spacing:-.045em;line-height:.93}
+.hero h1 em{font-family:var(--serif);font-weight:400;letter-spacing:-.02em}
+.hero-foot{display:grid;grid-template-columns:1.2fr 1fr;gap:2rem 4rem;align-items:end;margin-top:clamp(2rem,5vw,4rem)}
+.hero p{color:var(--on-plum-muted);font-size:clamp(1.15rem,1.8vw,1.35rem)}
+.btns{display:flex;flex-wrap:wrap;gap:.8rem;align-items:center}
+.btn{display:inline-block;font-family:var(--display);font-weight:700;font-size:1.05rem;text-decoration:none;padding:.95rem 1.7rem;border-radius:99px;background:var(--coral);color:var(--plum);transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 0 -2px rgba(255,106,92,.35)}
+.btn.ghost{background:none;color:inherit;border:1.5px solid currentColor}
+.wave{display:flex;align-items:flex-end;gap:clamp(3px,.6vw,8px);height:clamp(90px,16vw,190px);margin-top:clamp(3rem,7vw,5.5rem)}
+.wave span{flex:1;background:var(--coral);border-radius:99px 99px 0 0;height:var(--h);transform-origin:bottom;animation:rise 1.4s cubic-bezier(.2,.8,.2,1) both,sway 4.5s ease-in-out infinite;animation-delay:calc(var(--i)*22ms),calc(1.6s + var(--i)*70ms)}
+.wave span:nth-child(3n){background:var(--glass)}
+.wave span:nth-child(7n){background:var(--on-plum)}
+@keyframes rise{from{transform:scaleY(.04)}}
+@keyframes sway{50%{transform:scaleY(.62)}}
+@media(max-width:780px){.hero-foot{grid-template-columns:1fr}}
+
+/* ABOUT */
+.about-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:3rem 6rem;margin-top:3.5rem}
+.about-grid .big{font-family:var(--display);font-size:clamp(1.5rem,2.6vw,2.2rem);line-height:1.2;letter-spacing:-.02em;font-weight:500;max-width:22ch;margin:0}
+.facts{display:grid;gap:0}
+.facts div{display:grid;grid-template-columns:9rem 1fr;gap:1rem;padding:1.3rem 0;border-top:1px solid var(--line)}
+.facts div:last-child{border-bottom:1px solid var(--line)}
+.facts dt{font-family:var(--display);font-weight:700;font-size:1rem}
+.facts dd{margin:0}
+@media(max-width:780px){.about-grid{grid-template-columns:1fr;gap:2rem}.facts div{grid-template-columns:1fr;gap:.2rem}}
+
+/* PLACEHOLDERS */
+.ph{position:relative;aspect-ratio:var(--r,4/3);border-radius:4px;overflow:hidden;background:
+  radial-gradient(circle at 20% 15%,rgba(255,106,92,.45),transparent 45%),
+  radial-gradient(circle at 85% 90%,rgba(127,209,192,.4),transparent 50%),var(--plum2);
+  color:var(--on-plum);display:flex;align-items:flex-end;padding:1rem}
+.ph::before{content:"";position:absolute;inset:.7rem;border:1px dashed rgba(244,240,246,.4);border-radius:2px;z-index:1}
+.ph span{position:relative;z-index:2;font-family:var(--display);font-size:.88rem;line-height:1.35;font-weight:500;background:var(--plum);padding:.45rem .7rem;border-radius:3px}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:3}
+
+/* BUILDING */
+.building{background:var(--card)}
+.cards{display:grid;grid-template-columns:repeat(12,1fr);gap:1.5rem;margin-top:3.5rem}
+.card{background:var(--bg);padding:clamp(1.4rem,2.5vw,2.2rem);display:flex;flex-direction:column;gap:1.2rem;border-radius:4px;transition:transform .3s}
+.card:hover{transform:translateY(-4px)}
+.card.main{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;background:var(--plum);color:var(--on-plum)}
+.card.main p{color:var(--on-plum-muted)}
+.card.half{grid-column:span 6}
+.status{font-family:var(--display);font-weight:600;font-size:.9rem;color:var(--muted)}
+.main .status{color:var(--glass)}
+.tags{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;padding:0;margin:.3rem 0 0}
+.tags li{font-family:var(--display);font-size:.9rem;font-weight:500;border:1px solid rgba(244,240,246,.35);border-radius:99px;padding:.3rem .85rem}
+@media(max-width:900px){.card.main{grid-template-columns:1fr}.card.half{grid-column:1/-1}}
+
+/* MISSION */
+.mission{padding-bottom:0}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem;margin-top:3.5rem}
+.trio>div{border-top:2px solid var(--ink);padding-top:1.4rem}
+.trio h3{margin-bottom:.8rem}
+.trio p{color:var(--muted);margin:0}
+
+/* Philosophy / Approach / Focus — distinct card panel */
+.principles{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:3.5rem;background:var(--card);border-radius:4px;overflow:hidden}
+.principles>div{padding:clamp(1.4rem,2.5vw,2rem);border-right:1px solid var(--line)}
+.principles>div:last-child{border-right:none}
+.principles h3{font-size:clamp(1.2rem,2vw,1.65rem);margin-bottom:.8rem;letter-spacing:-.02em}
+.principles p{color:var(--muted);margin:0;font-size:1rem}
+.principles-label{font-family:var(--display);font-weight:600;font-size:.85rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-top:3.5rem 0 1rem;display:flex;align-items:center;gap:.5rem}
+.principles-label::before{content:"";width:.5rem;height:.5rem;border-radius:50%;background:var(--glass)}
+@media(max-width:860px){
+  .trio{grid-template-columns:1fr;gap:2rem}
+  .principles{grid-template-columns:1fr}
+  .principles>div{border-right:none;border-bottom:1px solid var(--line)}
+  .principles>div:last-child{border-bottom:none}
+}
+
+.vision{margin:3.5rem 0 0;max-width:62ch;border-left:4px solid var(--coral);padding-left:1.2rem}
+.vision strong{font-family:var(--display);font-weight:700}
+
+/* FOUNDER */
+.founder-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:4rem 6rem;align-items:start;margin-top:3rem}
+.founder-grid .ph{--r:4/5;position:sticky;top:96px}
+.pull{font-family:var(--serif);font-style:italic;font-size:clamp(1.6rem,3vw,2.5rem);line-height:1.2;letter-spacing:-.01em;margin:0 0 2rem;max-width:20ch;border-left:4px solid var(--coral);padding-left:1.2rem}
+.founder-identity{font-family:var(--display);font-size:.9rem;font-weight:600;color:var(--muted);letter-spacing:.02em;margin:.4rem 0 2rem;display:flex;align-items:center;gap:.5rem}
+.founder-identity::before{content:"";width:.4rem;height:.4rem;border-radius:50%;background:var(--coral);flex-shrink:0}
+@media(max-width:900px){.founder-grid{grid-template-columns:1fr}.founder-grid .ph{position:relative;top:0;max-width:440px}}
+
+/* TAMPA */
+.tampa{background:var(--plum);color:var(--on-plum);position:relative;overflow:hidden}
+.tampa .kicker{color:var(--on-plum-muted)}
+.tampa-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem 6rem;align-items:center}
+.tampa p{color:var(--on-plum-muted)}
+.tampa .ph{--r:4/3}
+@media(max-width:900px){.tampa-grid{grid-template-columns:1fr}}
+
+/* NEXT */
+.next-list{list-style:none;padding:0;margin:3.5rem 0 0;border-top:1px solid var(--ink)}
+.next-list li{display:grid;grid-template-columns:1.1fr 1.6fr auto;gap:1rem 3rem;align-items:baseline;padding:1.6rem 0;border-bottom:1px solid var(--line);transition:padding .3s,background .3s}
+.next-list li:hover{padding-left:1rem;background:var(--card)}
+.next-list h3{font-size:clamp(1.3rem,2.2vw,1.8rem)}
+.next-list p{margin:0;color:var(--muted)}
+.chip{font-family:var(--display);font-weight:600;font-size:.85rem;padding:.3rem .8rem;border-radius:99px;background:var(--glass);color:var(--plum);white-space:nowrap}
+.chip.c2{background:var(--coral)}
+.chip.c3{background:none;border:1px solid var(--muted);color:var(--muted)}
+.chip.c4{background:none;border:1px solid var(--glass);color:var(--glass)}
+@media(max-width:780px){.next-list li{grid-template-columns:1fr;gap:.5rem}}
+
+/* COLLABORATE */
+.collaborate{background:var(--plum);color:var(--on-plum)}
+.collaborate .kicker{color:var(--on-plum-muted)}
+.collaborate h2{max-width:18ch}
+.collaborate-inner{display:grid;grid-template-columns:1.1fr 1fr;gap:3rem 6rem;align-items:center;margin-top:3rem}
+.collaborate p{color:var(--on-plum-muted)}
+.collab-types{list-style:none;padding:0;margin:1.8rem 0 0;display:flex;flex-wrap:wrap;gap:.5rem}
+.collab-types li{font-family:var(--display);font-size:.9rem;font-weight:500;border:1px solid rgba(244,240,246,.3);border-radius:99px;padding:.3rem .9rem;color:var(--on-plum-muted)}
+@media(max-width:860px){.collaborate-inner{grid-template-columns:1fr}}
+
+/* CONNECT */
+.connect{background:var(--card)}
+.connect h2{max-width:14ch}
+.links{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:3rem}
+.links a{background:var(--bg);padding:1.6rem 1.8rem;text-decoration:none;display:flex;flex-direction:column;gap:.2rem;transition:background .25s,color .25s}
+.links a:hover{background:var(--plum);color:var(--on-plum)}
+.links small{font-family:var(--display);font-weight:600;font-size:.9rem;color:var(--muted)}
+.links a:hover small{color:var(--glass)}
+.links strong{font-family:var(--display);font-size:1.4rem;letter-spacing:-.02em}
+@media(max-width:600px){.links{grid-template-columns:1fr}}
+
+.signup{background:var(--plum);color:var(--on-plum);padding:clamp(1.6rem,4vw,3rem);margin-top:3rem;display:grid;grid-template-columns:1fr 1.1fr;gap:2rem 4rem;align-items:center;border-radius:4px}
+.signup h3{font-size:clamp(1.8rem,3.4vw,2.8rem)}
+.signup p{color:var(--on-plum-muted);margin:.8rem 0 0}
+.signup form{display:flex;flex-wrap:wrap;gap:.7rem}
+.signup input[type=email]{flex:1 1 220px;min-width:0;font:500 1.05rem var(--display);padding:.95rem 1.3rem;border-radius:99px;border:1.5px solid rgba(244,240,246,.4);background:transparent;color:var(--on-plum)}
+.signup input::placeholder{color:var(--on-plum-muted)}
+.signup input:focus{border-color:var(--coral);outline:none}
+.signup button{border:0;cursor:pointer}
+.signup .note{flex-basis:100%;font-family:var(--display);font-size:.9rem;color:var(--on-plum-muted);margin:.2rem 0 0;min-height:1.3em}
+.signup .note.msg{color:var(--glass)}
+.hp{position:absolute;left:-9999px}
+.links{margin-top:1.5rem}
+.links strong{overflow-wrap:anywhere}
+@media(max-width:860px){.signup{grid-template-columns:1fr}}
+footer{background:var(--plum);color:var(--on-plum);padding:3rem 0 2.5rem;font-family:var(--display);font-size:.95rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem 2rem;align-items:baseline}
+footer p{margin:0;color:var(--on-plum-muted)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="TP Media home">TP<i>media</i><b aria-hidden="true"></b></a>
+    <button class="burger" aria-expanded="false" aria-controls="menu">Menu</button>
+    <ul id="menu">
+      <li><a href="#about">About</a></li>
+      <li><a href="#building">What we're building</a></li>
+      <li><a href="#founder">Founder</a></li>
+      <li><a href="#collaborate">Collaborate</a></li>
+      <li><a class="pill" href="#connect">Connect</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero" style="padding-bottom:0">
+  <div class="wrap">
+    <p class="kicker">Tampa, Florida. Now in development.</p>
+    <h1>Your story deserves <em>thoughtful production.</em></h1>
+    <div class="hero-foot">
+      <p>TP Media is an emerging Tampa-based media and technology company. We're building original content, honest conversations, and educational media for creators, podcasters, artists, and anyone with something worth saying — where storytelling, culture, technology, and community meet.</p>
+      <div class="btns">
+        <a class="btn" href="#connect">Follow the journey</a>
+        <a class="btn ghost" href="#building">See what we're building</a>
+      </div>
+    </div>
+    <div class="wave" id="wave" aria-hidden="true"></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <p class="kicker">About TP Media</p>
+    <h2>A media company first. Built to grow.</h2>
+    <div class="about-grid">
+      <p class="big">Media is the vehicle. Storytelling is the voice. Technology expands what's possible. Community gives it purpose.</p>
+      <dl class="facts">
+        <div><dt>Who we are</dt><dd>A new, Tampa-based media and technology company, being built deliberately and in the open.</dd></div>
+        <div><dt>What we create</dt><dd>Original content, production, conversations, and creative projects — starting small and growing with intention. Great content doesn't happen by accident.</dd></div>
+        <div><dt>What we explore</dt><dd>Culture, music, entertainment, technology, AI, careers, entrepreneurship, and community.</dd></div>
+        <div><dt>Why we exist</dt><dd>To use media to educate, connect, and create access: making technology and media easier to understand, amplifying interesting voices, and opening doors to opportunity.</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- BUILDING -->
+<section id="building" class="building">
+  <div class="wrap">
+    <p class="kicker">What we're building</p>
+    <h2>Three ideas, one platform.</h2>
+    <div class="cards">
+      <article class="card main">
+        <div>
+          <p class="status">At the center. Early stage.</p>
+          <h3>Media &amp; Storytelling</h3>
+          <p style="margin-top:1rem">Production is the heart of TP Media. Media is a craft — and we treat it that way. We're building toward original shows, podcasts, interviews, and digital series, and toward creating media alongside other creatives, entrepreneurs, organizations, and community partners who want compelling content that builds meaningful audience connections.</p>
+          <ul class="tags" aria-label="Areas we're exploring">
+            <li>Podcast production</li><li>Video &amp; short-form</li><li>Artist &amp; entrepreneur interviews</li><li>Hosting &amp; on-camera</li><li>Original series</li><li>Music &amp; culture</li><li>Event coverage</li><li>Content strategy</li><li>Behind the scenes</li><li>Creative direction</li><li>Story development</li>
+          </ul>
+        </div>
+        <!-- EDIT: replace with <img src="media.jpg" alt="..."> inside .ph -->
+        <div class="ph" style="--r:3/2"><span>Media / music image<br>Landscape 3:2 &middot; 1800 &times; 1200 px</span><img src="images/media.jpg" alt="Two Black women in conversation in an upscale podcast studio, seated on a couch with professional microphones and a production workstation visible" loading="lazy" onerror="this.style.display='none'"></div>
+      </article>
+
+      <article class="card half">
+        <div class="ph" style="--r:3/2"><span>Technology / work image<br>Landscape 3:2 &middot; 1800 &times; 1200 px</span><img src="images/technology.jpg" alt="A Black woman working at a desk with multiple monitors showing generative AI tools and AI agent development interfaces" loading="lazy" onerror="this.style.display='none'"></div>
+        <p class="status">We're exploring</p>
+        <h3>Technology &amp; AI</h3>
+        <p>Technology that complements the storytelling. We want to educate everyday people about AI and technology in plain language, through educational media, workshops, and over time, curriculum and learning resources.</p>
+      </article>
+
+      <article class="card half">
+        <div class="ph" style="--r:3/2"><span>Community / event image<br>Landscape 3:2 &middot; 1800 &times; 1200 px</span><img src="images/community.jpg" alt="A Black woman teaching a generative AI workshop to a small diverse group of students in a modern classroom, with a presentation screen visible" loading="lazy" onerror="this.style.display='none'"></div>
+        <p class="status">Our vision includes</p>
+        <h3>Community, Education &amp; Opportunity</h3>
+        <p>Our vision is to use media, education, events, and community-building to help people understand technology and media, discover opportunities, develop skills, and build meaningful connections, especially people who haven't always seen themselves in these spaces.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION -->
+<section id="mission" class="mission">
+  <div class="wrap">
+    <p class="kicker">Our mission</p>
+    <h2>Educate. Connect. Create access.</h2>
+    <p class="lead" style="margin-top:1.5rem">Media is how we reach people. Online and in real community spaces, we want to help everyday people understand technology and media, find a way in, and meet others on the same path.</p>
+    <div class="trio">
+      <div>
+        <h3>Educate</h3>
+        <p>Plain-language education on AI, technology, and media. We're exploring workshops, educational media, and learning resources, from AI literacy to content creation.</p>
+      </div>
+      <div>
+        <h3>Connect</h3>
+        <p>Workshops, networking nights, creator and entrepreneur meetups, panels, and community events, in person and online. This is future programming, not a current schedule.</p>
+      </div>
+      <div>
+        <h3>Create access</h3>
+        <p>Many paths into tech and media are simply poorly explained. We want to be a trusted guide to apprenticeships, workforce programs, bootcamps, certifications, scholarships, and internships that already exist. We don't run these programs; we help people find and understand them, and may develop our own later.</p>
+      </div>
+    </div>
+
+    <!-- Philosophy / Approach / Focus — distinct card panel -->
+    <p class="principles-label" style="margin-top:3.5rem;margin-bottom:0;display:flex;align-items:center;gap:.5rem;font-family:var(--display);font-weight:600;font-size:.85rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase"><span style="display:inline-block;width:.5rem;height:.5rem;border-radius:50%;background:var(--glass);flex-shrink:0"></span>How we work</p>
+    <div class="principles" style="margin-top:1rem">
+      <div>
+        <h3>Philosophy</h3>
+        <p>Clarity over clutter. Quality over quantity. Story first, always. We believe content built with intention outlasts content built for volume.</p>
+      </div>
+      <div>
+        <h3>Approach</h3>
+        <p>Thoughtful, collaborative, and intentional. We're building slowly and in the open — because the work deserves it, and so does the audience.</p>
+      </div>
+      <div>
+        <h3>Focus</h3>
+        <p>Media, storytelling, creators, culture, technology, education, and community. These aren't separate lanes — they're the same conversation happening in different rooms.</p>
+      </div>
+    </div>
+
+    <p class="vision"><strong>Longer-term vision.</strong> We're also exploring a mentorship or membership community that could connect emerging professionals, creatives, entrepreneurs, and people entering technology with peers, experienced professionals, learning resources, and opportunities. It's an idea we're exploring, not a launched program.</p>
+  </div>
+</section>
+
+<!-- FOUNDER -->
+<section id="founder">
+  <div class="wrap">
+    <p class="kicker">Founder</p>
+    <div class="founder-grid">
+      <div class="ph">
+        <span>Founder portrait<br>Portrait 4:5 &middot; 1600 &times; 2000 px</span>
+        <img src="images/tatyanna.jpg" alt="Portrait of Tatyanna, founder of TP Media" loading="lazy" onerror="this.style.display='none'">
+      </div>
+      <div>
+        <h2 style="margin-bottom:.3rem">Tatyanna</h2>
+        <p class="founder-identity">Media Producer &middot; Host &middot; Content Strategist</p>
+        <p class="pull">Many interests aren't a lack of direction. They're the map.</p>
+        <p class="lead">TP Media is founded by Tatyanna, a Tampa native whose path runs through media, music and entertainment, entrepreneurship, community work, and technology.</p>
+        <p>She has interviewed artists, worked around music and entertainment, created podcast and other content, built businesses, shown up in nonprofit, networking, and event spaces, and eventually moved into technology. Today she works with data, Python, automation, and AI.</p>
+        <p>For years, having so many interests felt like not having one clear direction. TP Media is the realization that they were never disconnected. Media, creativity, technology, community, and storytelling belong in the same room.</p>
+        <p>She knows what it's like to enter technology through a nontraditional path, to feel imposter syndrome, and to learn new skills as an adult while building confidence along the way. That's why she cares about making intimidating spaces feel open. She's also a mother, and that perspective shapes why she's building something meant to last.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TAMPA -->
+<section class="tampa" id="tampa">
+  <div class="wrap tampa-grid">
+    <div>
+      <p class="kicker">Rooted in Tampa</p>
+      <h2>Built here, shaped by here.</h2>
+      <p style="margin-top:2rem">TP Media is being built in Tampa and influenced by the people around it: the artists, entrepreneurs, technologists, organizers, and neighbors doing real work in this city. We want to tell their stories and build alongside them.</p>
+    </div>
+    <div class="ph"><span>Tampa image (optional)<br>Landscape 4:3 &middot; 1600 &times; 1200 px</span><img src="images/tampa.jpg" alt="The Tampa skyline at sunset, reflected in the water" loading="lazy" onerror="this.style.display='none'"></div>
+  </div>
+</section>
+
+<!-- NEXT -->
+<section id="next">
+  <div class="wrap">
+    <p class="kicker">What's next</p>
+    <h2>Still being built. Here's the direction.</h2>
+    <p class="lead" style="margin-top:1.5rem">We're building intentionally. From original productions and creative collaborations to educational experiences and community initiatives, these are the ideas and projects taking shape at TP Media.</p>
+    <ul class="next-list">
+      <li><h3>Original conversations &amp; interviews</h3><p>Sit-down talks with creatives, entrepreneurs, professionals, and community voices.</p><span class="chip c2">In development</span></li>
+      <li><h3>Podcast &amp; video content</h3><p>Audio and video formats, from long conversations to short-form pieces.</p><span class="chip c2">In development</span></li>
+      <li><h3>Hosting &amp; event coverage</h3><p>On-camera hosting, panel moderation, and media coverage for events, launches, and live moments worth documenting.</p><span class="chip c2">In development</span></li>
+      <li><h3>Technology &amp; AI education</h3><p>Plain-language educational media, with curriculum and learning resources to follow.</p><span class="chip">Exploring</span></li>
+      <li><h3>Workshops &amp; community events</h3><p>Technology, AI, and content-creation workshops, plus meetups and panels, online and in person.</p><span class="chip">Exploring</span></li>
+      <li><h3>Career pathway resources</h3><p>Guides to existing apprenticeships, programs, scholarships, and entry points into tech and media.</p><span class="chip">Exploring</span></li>
+      <li><h3>Mentorship / membership community</h3><p>A possible space to connect with peers, mentors, and opportunities.</p><span class="chip c3">Longer-term</span></li>
+      <li><h3>Collaborations</h3><p>Producing media with other creatives, brands, organizations, and partners.</p><span class="chip c4">Open to conversations</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- COLLABORATE -->
+<section id="collaborate" class="collaborate">
+  <div class="wrap">
+    <p class="kicker">Work with us</p>
+    <h2>Have a story worth telling?</h2>
+    <div class="collaborate-inner">
+      <div>
+        <p class="lead" style="color:var(--on-plum-muted)">TP Media is open to creative conversations. Whether you want to be featured, collaborate on something new, or explore what we might build together — reach out. We'd love to hear from you.</p>
+        <p style="color:var(--on-plum-muted)">We welcome inquiries about:</p>
+        <ul class="collab-types" aria-label="Collaboration types">
+          <li>Interviews &amp; features</li>
+          <li>Podcast appearances</li>
+          <li>Artist &amp; creator features</li>
+          <li>Media production &amp; original content</li>
+          <li>Hosting &amp; on-camera</li>
+          <li>Panel moderation</li>
+          <li>Event coverage</li>
+          <li>Creative projects</li>
+          <li>Brand &amp; organization partnerships</li>
+          <li>Speaking opportunities</li>
+          <li>Community opportunities</li>
+          <li>General inquiries</li>
+        </ul>
+        <div style="margin-top:2.5rem">
+          <a class="btn" href="mailto:contact.tpmediastudios@gmail.com?subject=TP%20Media%20%E2%80%94%20Collaboration%20Inquiry">Get in touch</a>
+        </div>
+      </div>
+      <div>
+        <p style="font-family:var(--serif);font-style:italic;font-size:clamp(1.4rem,2.6vw,2.1rem);line-height:1.3;letter-spacing:-.01em;color:var(--on-plum);border-left:4px solid var(--glass);padding-left:1.2rem;margin:0">"Every collaboration starts with a conversation. Let's have one."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONNECT -->
+<section id="connect" class="connect">
+  <div class="wrap">
+    <p class="kicker">Connect</p>
+    <h2>Follow along as it takes shape.</h2>
+    <p class="lead" style="margin-top:1.5rem">The best way to support TP Media right now is to follow the journey. Subscribe for updates, say hello, and share it with someone who'd care.</p>
+
+    <div class="signup">
+      <div>
+        <h3>Stay in the loop.</h3>
+        <p>Get the occasional note about new content, projects, events, opportunities, and what TP Media is building. No spam, and you can leave anytime.</p>
+      </div>
+      <form id="signup" action="https://gmail.us20.list-manage.com/subscribe/post?u=a77a512b0065e6a0a4b66fc78&amp;id=9066292a1f&amp;f_id=00fd50e6f0" method="post" target="_blank" novalidate>
+        <label for="em" class="hp" style="position:absolute;left:-9999px">Email address</label>
+        <input id="em" type="email" name="EMAIL" placeholder="Your email address" autocomplete="email" required>
+        <!-- Mailchimp anti-bot honeypot — must stay hidden -->
+        <div aria-hidden="true" style="position:absolute;left:-5000px;">
+          <input type="text" name="b_a77a512b0065e6a0a4b66fc78_9066292a1f" tabindex="-1" value="">
+        </div>
+        <button class="btn" type="submit">Subscribe</button>
+        <p class="note" id="note" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+
+    <div class="links">
+      <a href="mailto:contact.tpmediastudios@gmail.com"><small>Email</small><strong>contact.tpmediastudios@gmail.com</strong></a>
+      <a href="https://www.linkedin.com/in/tatyanna-page" target="_blank" rel="noopener"><small>Founder on LinkedIn</small><strong>Keep up with Tatyanna on LinkedIn</strong></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="mark" href="#top" aria-label="Back to top">TP<i>media</i><b aria-hidden="true"></b></a>
+    <p>Tampa, Florida</p>
+    <p>&copy; <span id="yr">2026</span> TP Media. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var w=document.getElementById('wave'),n=56;
+  for(var i=0;i<n;i++){
+    var s=document.createElement('span');
+    var h=28+Math.abs(Math.sin(i*.43)*40+Math.sin(i*1.37)*22+Math.sin(i*.11)*14);
+    s.style.setProperty('--h',Math.min(100,h)+'%');s.style.setProperty('--i',i);w.appendChild(s);
+  }
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  var f=document.getElementById('signup'),nt=document.getElementById('note');
+  f.addEventListener('submit',function(e){
+    var em=document.getElementById('em');
+    if(!em.value||!/^\S+@\S+\.\S+$/.test(em.value)){e.preventDefault();nt.textContent='Please enter a valid email address.';return;}
+    nt.textContent='';
+  });
+  var b=document.querySelector('.burger'),m=document.getElementById('menu');
+  b.addEventListener('click',function(){var o=m.classList.toggle('open');b.setAttribute('aria-expanded',o);});
+  m.addEventListener('click',function(e){if(e.target.tagName==='A'){m.classList.remove('open');b.setAttribute('aria-expanded','false');}});
+})();
+</script>
+</body>
+</html>
